@@ -3,14 +3,6 @@ module App
 open Feliz
 open Feliz.MaterialUI
 
-type State = string option
-
-type Msg = string option
-
-let init() = None
-
-let update (state:State) (msg:Msg) = state
-
 let theme = Styles.createMuiTheme([
     theme.palette.primary Colors.blueGrey
 ])
@@ -19,6 +11,7 @@ let useStyles = Styles.makeStyles(fun styles theme ->
     {|
         root = styles.create [
             style.backgroundColor theme.palette.primary.dark
+            // style.backgroundColor.aqua
         ]
     |}
 )
@@ -32,7 +25,7 @@ let themeTest =
         ]
     )
 
-let render state dispatch =
+let render () =
     Mui.themeProvider [
         themeProvider.theme theme
         themeProvider.children [

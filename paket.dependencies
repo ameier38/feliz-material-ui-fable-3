@@ -9,3 +9,14 @@ nuget Fable.Elmish
 nuget Fable.Elmish.HMR
 nuget Fable.Elmish.React
 nuget Feliz.MaterialUI
+
+// [ FAKE GROUP ]
+group Build
+    storage none
+    source https://api.nuget.org/v3/index.json
+    nuget FSharp.Core 4.7.2
+    nuget Fake.DotNet.Cli
+    nuget Fake.JavaScript.Npm
+    nuget Fake.IO.FileSystem
+    nuget Fake.Core.Target
+    nuget BlackFox.Fake.BuildTask
